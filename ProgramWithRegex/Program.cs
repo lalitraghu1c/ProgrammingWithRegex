@@ -13,7 +13,7 @@ namespace ProgrammingWithRegex
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Check Patter preceding Alphabet before Postal Code\n3. Exit");
+                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Restrict Postal Code at beggining\n3. Restrict Postal Code at beggining\n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 PostalCode code = new PostalCode();
                 switch (option)
@@ -23,6 +23,9 @@ namespace ProgrammingWithRegex
                         break;
                     case 2:
                         code.TestPinCode1("A400088");
+                        break;
+                    case 3:
+                        code.TestPinCode1("40008A");
                         break;
                     default:
                         choice = false;
