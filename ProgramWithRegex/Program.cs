@@ -13,7 +13,7 @@ namespace ProgrammingWithRegex
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Restrict Postal Code at beggining\n3. Restrict Postal Code at beggining\n4. Exit");
+                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Restrict Postal Code at beggining\n3. Restrict Postal Code at ending\n4. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 PostalCode code = new PostalCode();
                 switch (option)
@@ -22,10 +22,13 @@ namespace ProgrammingWithRegex
                         code.TestPinCode1("400088");
                         break;
                     case 2:
-                        code.TestPinCode1("A400088");
+                        code.TestPinCode2("A400088");
                         break;
                     case 3:
-                        code.TestPinCode1("40008A");
+                        code.TestPinCode3("40008A");
+                        break;
+                    case 4:
+                        code.TestPinCode4("400 088");
                         break;
                     default:
                         choice = false;
