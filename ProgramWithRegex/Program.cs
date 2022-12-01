@@ -1,4 +1,5 @@
-﻿using RegexDemo;
+﻿using ProgramWithRegex;
+using RegexDemo;
 using System;
 using System.Runtime;
 
@@ -13,9 +14,11 @@ namespace ProgrammingWithRegex
             bool choice = true;
             while (choice)
             {
-                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Restrict Postal Code at beggining\n3. Restrict Postal Code at ending\n4. Exit");
+                Console.WriteLine("1. Check Pattern to validate Postal Code\n2. Restrict Postal Code at beggining\n3. Restrict Postal Code at ending\n" +
+                                  "4. Postal Code with Space\n5. Email Validation/n 6. Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 PostalCode code = new PostalCode();
+                Email email = new Email();
                 switch (option)
                 {
                     case 1:
@@ -29,6 +32,9 @@ namespace ProgrammingWithRegex
                         break;
                     case 4:
                         code.TestPinCode4("400 088");
+                        break;
+                    case 5:
+                        email.EmailPartFirst();
                         break;
                     default:
                         choice = false;
