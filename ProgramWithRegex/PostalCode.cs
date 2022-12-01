@@ -12,7 +12,7 @@ namespace RegexDemo
         const string PIN_CODE_PATTERN1 = "^[0-9]{6}$";
         const string PIN_CODE_PATTERN2 = "^[0-9]{6}$";
         const string PIN_CODE_PATTERN3 = "^[0-9]{6}$";
-        const string PIN_CODE_PATTERN4 = "^[0-9]{3}[ ]{1}[0-9]{3}$";
+        const string PIN_CODE_PATTERN4 = "^[0-9]{3}[.]{1}[0-9]{3}$";
         public void TestPinCode1(string input)
         {
             if (Regex.IsMatch(input, PIN_CODE_PATTERN1))
